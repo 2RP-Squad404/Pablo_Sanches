@@ -16,7 +16,7 @@
 # Sobre:
 Em suma, busquei me introduzir em estudar os conceitos iniciais dos módulos citados acima, é certo que realizarei um aprofundamento maior para todas etapas, analisando cursos, vdeos, artigos, etc.
 <br>
-
+<br>
 ## Resumo dos módulos 
 
  # **1. Engenharia de Dados**
