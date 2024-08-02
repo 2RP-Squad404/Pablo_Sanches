@@ -134,7 +134,7 @@ Através do seu uso frequente do conjunto com  data werehouse e data lakes princ
 ### **5.6 Banco de dados Transacionais**<br>
 Sistemas de gerenciamento de banco de dados projetados para gerenciar e facilitar o processamento de transações em tempo real.
 
-### **5.6.1 Aplicações e Características**<br>
+**5.6.1 Aplicações e Características**<br>
 Devido suas altas demandas e buscas, suas aplicações são destaque em vários meios do mercado, por exemplo:
 
 - E-commmerce;
@@ -154,17 +154,21 @@ Dentre os usos das bases transacionais, vale destacar suas principais caracterí
 
 - **Alta Concurrência:** Suportam um grande número de usuários simultâneos, mantendo a integridade dos dados.
 
+<br>
 
-## Links de Laboratórios (se houver)
+## Links de Laboratórios
 
 - **Notion Banco de Dados** (https://cainaantunes.notion.site/Banco-de-Dados-12203c13265e4413866aac27bacc4812)
 
+<br>
+
 **Recursos Utilizados:**  
-- Trilha de Conhecimento (https://github.com/2RP-Squad404/Data_Science?tab=readme-ov-file)
+- Trilha de Conhecimento
 - GitMind (https://gitmind.com/app/docs/mokn7z35)
 - VS Code
 - Git & GitHub
 
+<br>
 
 **Desafios Encontrados:**  
 Para melhor absorção dos assuntos, estudei os conteúdos de introdução de alguns tópicos iniciais sobre **Engenharia de Dados**. Optei por essa escolha, pois quero possuir uma base inicial dos assuntos para se aprofundar de vez nos temas da trilha.
@@ -173,4 +177,4 @@ Para melhor absorção dos assuntos, estudei os conteúdos de introdução de al
 O único feedback no qual recibi, foi um feedback geral, que consistiu na utilização do template para criação do relatório. Com isso ajustei meu relatório de acordo com o template.
 
 **Próximos Passos:**  
-Irei revisar os módulos abordados desse relatório e buscarei maior aprofundamento neles. Para os futuros módulos, quero diricionar meu foco para módulo de Git e Mensageria.
+Irei revisar os módulos abordados deste relatório e buscarei maior aprofundamento neles. Para os futuros módulos, quero diricionar meu foco para módulo de Git e Mensageria.
