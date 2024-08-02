@@ -24,7 +24,7 @@ A colaboração entre áreas da engenharia, ciência e análise de dados é fund
 
 **1.2 Principais atividades**
 
-**1.2.1 Aquisição de dados**
+**1.2.1 Aquisição de dados**<br>
 Coleta de dados de múltiplas fontes, como bancos de dados, APIs, arquivos, sensores e outras.
 
 **1.2.2 Amazenamento de dados**
