@@ -22,7 +22,7 @@ Composta por diferentes práticas, a engenharia de dados é repleta por atividad
 Dentre as atividades da engenharia de dados, são utilizadas diversas ferreamentas para aplicação, plataformas de processamento e banco de dados, linguagens(Python, SQL, Java, Scala, R), a utilização do Data Warehousing e de Ferramentas ETL, são exemplos principais entre as ferrramentas comuns.
 A colaboração entre áreas da engenharia, ciência e análise de dados é fundamental para extrair **insights** significativos e impulsionar a inovação. 
 
-**1.2 Principais atividades**
+** ### 1.2 Principais atividades**
 
 **1.2.1 Aquisição de dados**<br>
 Coleta de dados de múltiplas fontes, como bancos de dados, APIs, arquivos, sensores e outras.
