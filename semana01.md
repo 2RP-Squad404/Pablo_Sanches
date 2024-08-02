@@ -13,11 +13,11 @@
 7. **Transacional** 
 
 
-## Resumo dos módulos 
-
 # Sobre:
 Em suma, busquei me introduzir em estudar os conceitos iniciais dos módulos citados acima, é certo que realizarei um aprofundamento maior para todas etapas, analisando cursos, vdeos, artigos, etc.
 <br>
+
+## Resumo dos módulos 
 
  # **1. Engenharia de Dados**
 Engenharia de dados é a área que abranje os conceitos de análise e processamento de dados. Visando a transformação de dados em brutos em informações práticas e relevantes, esta disciplina envolve a construção e manutenção de sistemas para coletar, armazenar, processar e analisar grandes volumes de dados. 
