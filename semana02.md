@@ -7,6 +7,7 @@
 1. **Modelagem de Dados**
 2. **Git**
 
+<br>
 
 ## Resumo dos módulos 
 
@@ -44,12 +45,8 @@ A normalização é um processo em bancos de dados que visa organizar os dados p
 - **Primeira Forma Normal (1NF)**<br>
 A tabela deve possuir atributos únicos, sem existir valores multivalorados.
 
-<br>
-
 - **Segunda Forma Normal (2NF)**<br>
 Atende à 1NF e os atributos dependem apenas da chave primária.
-
-<br>
 
 - **Terceira Forma Normal (3NF):**<br>
 Atende à 2NF e os atributos devem ser independentes entre si.
@@ -101,7 +98,7 @@ Em suma, tem a função de apagar o commit.
 <br>
 <br>
 
-**##Recursos Utilizados:**  
+## **Recursos Utilizados:**  
 
 - Curso Modelagem de Dados (https://youtu.be/SEnnucNP1h0?si=a4IzorMFpTD8d9r-)
 - Curso Udemy - Git e GitHub para inciantes (https://www.udemy.com/course/git-e-github-para-iniciantes/learn/lecture/5120580#reviews)
