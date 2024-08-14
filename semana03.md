@@ -124,7 +124,7 @@ Acredito que o único e breve desafio encontrado foi alinhar quais seriam as pri
 No momento, sem feedback para adiconar e sugestão de ajustes.
 
 **Próximos Passos:**  
-Em breve, focarei meus estudos nos frameworks e ferramentas do docker e coloca-las em práticas.
+Em breve, focarei meus estudos nos frameworks e ferramentas do docker e colocá-los em práticas.
 
 
 
