@@ -1,7 +1,7 @@
 **Nome do Estagiário:** Pablo Vinícius Domingues Sanches  
 **Data:** 27/08/2024
 
-<br>
+
 
 # Consultas com Hive (HiveQL)
 
