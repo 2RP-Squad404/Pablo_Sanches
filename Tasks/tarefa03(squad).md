@@ -3,7 +3,7 @@
 
 # **Manipulação de Dados através do BigQuery com SQL**
 
-### **Normalização dos dados***
+### **Normalização dos dados**
 - Removendo os dados repetidos.
 - Combinando os dados das tabelas 'Campaign' e 'Purchase'.
 
