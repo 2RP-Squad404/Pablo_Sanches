@@ -41,7 +41,7 @@ ON
 
 <br>
 
-### **View 1***
+### **View 1**
 - Esta view agrupa as compras por cliente, calculando o total gasto e os locais de compra mais frequentes.
 
 ```sql
