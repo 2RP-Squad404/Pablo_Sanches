@@ -43,4 +43,7 @@ Ao adicionar a view(script) gerado pelo Vertex AI, foi necessáio alguma mudanç
 - Alterar os direcionamentos: adicionando os caminhos de dataset e tabela;
 - Modificar  client_id: especificando para tabela  purchase.
 
---------------
+<br>
+
+# **Dúvidas**
+- Referente ao passo a passo (instruções do projeto);
