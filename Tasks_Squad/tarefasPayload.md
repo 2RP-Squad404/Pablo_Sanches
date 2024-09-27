@@ -110,63 +110,72 @@ FROM
 
 <br>
 
-## **Criação de Arquivo e Upload para BigQuery**
+## **Criação de Arquivo.sqlx e Upload para BigQuery**
  ```python 
- from google.cloud import bigquery
-
-# Configuração do cliente BigQuery
-client = bigquery.Client()
-
-# Sua query para criar a view
-query = """
-CREATE OR REPLACE VIEW `squadcalouros.dataform.event1` AS
+ query = """
+CREATE OR REPLACE VIEW `squadcalouros.dataform.event` AS
 SELECT
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.account_number') AS STRING) AS account_account_number,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.account_type') AS STRING) AS account_account_type,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.bank.address.city') AS STRING) AS account_bank_address_city,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.bank.address.state') AS STRING) AS account_bank_address_state,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.bank.address.street') AS STRING) AS account_bank_address_street,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.bank.address.zip_code') AS STRING) AS account_bank_address_zip_code,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.bank.branch') AS STRING) AS account_bank_branch,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.bank.name') AS STRING) AS account_bank_name,
-    SAFE_CAST(JSON_VALUE(t.data, '$.account.currency') AS STRING) AS account_currency,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.account_number') AS STRING) AS recipient_account_number,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.bank.address.city') AS STRING) AS recipient_bank_address_city,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.bank.address.state') AS STRING) AS recipient_bank_address_state,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.bank.address.street') AS STRING) AS recipient_bank_address_street,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.bank.address.zip_code') AS STRING) AS recipient_bank_address_zip_code,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.bank.branch') AS STRING) AS recipient_bank_branch,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.bank.name') AS STRING) AS recipient_bank_name,
-    SAFE_CAST(JSON_VALUE(t.data, '$.recipient.name') AS STRING) AS recipient_name,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.account_number') AS STRING) AS sender_account_number,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.bank.address.city') AS STRING) AS sender_bank_address_city,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.bank.address.state') AS STRING) AS sender_bank_address_state,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.bank.address.street') AS STRING) AS sender_bank_address_street,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.bank.address.zip_code') AS STRING) AS sender_bank_address_zip_code,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.bank.branch') AS STRING) AS sender_bank_branch,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.bank.name') AS STRING) AS sender_bank_name,
-    SAFE_CAST(JSON_VALUE(t.data, '$.sender.name') AS STRING) AS sender_name,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.amount') AS BIGNUMERIC) AS transaction_details_amount,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.description') AS STRING) AS transaction_details_description,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.fees.amount') AS BIGNUMERIC) AS transaction_details_fees_amount,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.fees.currency') AS STRING) AS transaction_details_fees_currency,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.method') AS STRING) AS transaction_details_method,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.reference_number') AS STRING) AS transaction_details_reference_number,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.status') AS STRING) AS transaction_details_status,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.timestamp') AS TIMESTAMP) AS transaction_details_timestamp,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_details.type') AS STRING) AS transaction_details_type,
-    SAFE_CAST(JSON_VALUE(t.data, '$.transaction_id') AS STRING) AS transaction_id,
-    SAFE_CAST(JSON_VALUE(t.data, '$.events') AS STRING) AS events
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.account_number') AS STRING) AS account_number,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.account_type') AS STRING) AS account_type,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.bank.address.city') AS STRING) AS account_bank_city,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.bank.address.state') AS STRING) AS account_bank_state,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.bank.address.street') AS STRING) AS account_bank_street,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.bank.address.zip_code') AS STRING) AS account_bank_zip_code,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.bank.branch') AS STRING) AS account_bank_branch,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.bank.name') AS STRING) AS account_bank_name,
+    SAFE_CAST(JSON_VALUE(data, '$.data.account.currency') AS STRING) AS account_currency,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.account_number') AS STRING) AS recipient_account_number,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.bank.address.city') AS STRING) AS recipient_bank_city,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.bank.address.state') AS STRING) AS recipient_bank_state,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.bank.address.street') AS STRING) AS recipient_bank_street,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.bank.address.zip_code') AS STRING) AS recipient_bank_zip_code,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.bank.branch') AS STRING) AS recipient_bank_branch,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.bank.name') AS STRING) AS recipient_bank_name,
+    SAFE_CAST(JSON_VALUE(data, '$.data.recipient.name') AS STRING) AS recipient_name,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.account_number') AS STRING) AS sender_account_number,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.bank.address.city') AS STRING) AS sender_bank_city,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.bank.address.state') AS STRING) AS sender_bank_state,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.bank.address.street') AS STRING) AS sender_bank_street,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.bank.address.zip_code') AS STRING) AS sender_bank_zip_code,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.bank.branch') AS STRING) AS sender_bank_branch,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.bank.name') AS STRING) AS sender_bank_name,
+    SAFE_CAST(JSON_VALUE(data, '$.data.sender.name') AS STRING) AS sender_name,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.amount') AS BIGNUMERIC) AS transaction_amount,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.description') AS STRING) AS transaction_description,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.fees.amount') AS BIGNUMERIC) AS transaction_fees_amount,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.fees.currency') AS STRING) AS transaction_fees_currency,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.method') AS STRING) AS transaction_method,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.reference_number') AS STRING) AS transaction_reference_number,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.status') AS STRING) AS transaction_status,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.timestamp') AS TIMESTAMP) AS transaction_timestamp,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_details.type') AS STRING) AS transaction_type,
+    SAFE_CAST(JSON_VALUE(data, '$.data.transaction_id') AS STRING) AS transaction_id
 FROM
     `squadcalouros.dataform.eventos` AS t;
 """
 
-# Executar a query para criar a view
+# ---> Salvar query como arquivo .sqlx <---
+with open("query.sqlx", "w") as file:
+    file.write(query)
+
+ ```
+
+ ```python
+from google.cloud import bigquery
+
+client = bigquery.Client()
+
+# ---> Ler o arquivo .sqlx gerado <---
+with open("query.sqlx", "r") as file:
+    query = file.read()
+
+# ---> Executar a query no BigQuery <---
 query_job = client.query(query)
 
-# Aguardar a conclusão do job
+# ---> Aguardar a conclusão do job <----
 query_job.result()
 
-print("View criada com sucesso.")
+print("View criada com sucesso no BigQuery.")
+
  ```
 
