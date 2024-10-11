@@ -79,6 +79,39 @@ O Dataplex facilita a análise de dados com ferramentas nativas do GCP, como Big
 <img src="Images/lakes.png" alt="alt text" width="600" height="255"/>
 </div>
 
+### **2.3 Tags** 
+No Google Dataplex, tags são metadados que podem ser usados para descrever e categorizar dados. Elas servem como uma camada adicional de informações, facilitando a governança e o gerenciamento dos dados em um Data Lake. As tags ajudam a organizar, classificar e identificar dados de forma mais eficiente, além de melhorar a busca, a análise e a aplicação de políticas de segurança e governança.<br>
+
+As **tags** no Dataplex são aplicadas aos assets (como datasets ou tabelas no BigQuery, buckets no Cloud Storage) e ajudam a identificar atributos específicos dos dados. Cada tag pode ter um conjunto de atributos que definem propriedades como:
+<br>
+<br>
+
+- `Tipo de Dado:` Pode ser usado para indicar se o dado é estruturado, semiestruturado ou não estruturado. <br>
+
+- `Sensibilidade:` Para indicar o nível de sensibilidade dos dados, como se eles contêm informações pessoais ou dados confidenciais.<br>
+
+- `Fonte:` Identificar a origem dos dados, como se eles vêm de sistemas de CRM, ERPs, ou redes sociais.<br>
+
+<br>
+
+<div style="text-align: center;">
+<img src="Images/tags.avif" alt="alt text" width="650" height="350"/>
+</div>
+
+
+### **2.3.1 Tags de Governança**
+>São usadas para aplicar políticas de acesso, conformidade e segurança a dados em diferentes assets (datasets, tabelas, arquivos).
+Por exemplo, você pode aplicar uma tag para indicar que certos dados são sensíveis ou que precisam cumprir com regulações como a LGPD ou SOX.
+
+### **2.3.1 Tags Personalizadas**
+>São criadas pelo próprio usuário para categorizar os dados de acordo com as necessidades do negócio.
+Você pode usar essas tags para identificar diferentes tipos de datasets, como dados de vendas, marketing ou recursos humanos.
+
+
+
+
+
+
 ---
 
 ## 🔗 Links de Laboratórios
