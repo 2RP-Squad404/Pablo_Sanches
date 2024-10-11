@@ -9,6 +9,7 @@
 
 - [**Governança de Dados**](#gdados)
 - [**Dataplex**](#dtplex)
+- [**Data Catalog**](#dtlog)
 
 ---
 
@@ -79,7 +80,15 @@ O Dataplex facilita a análise de dados com ferramentas nativas do GCP, como Big
 <img src="Images/lakes.png" alt="alt text" width="600" height="255"/>
 </div>
 
-### **2.3 Tags** 
+## 3. **Data Catalog** <a id="dtlog"></a>
+O Data Catalog é um serviço de gerenciamento de metadados totalmente gerenciado e escalável dentro do Dataplex que você pode usar para marcar ativos de dados e pesquisar ativos aos quais você tem acesso. As tags permitem que você anexe campos de metadados personalizados a ativos de dados específicos para fácil identificação e recuperação (como marcar certos ativos como contendo dados protegidos ou confidenciais); você também pode criar modelos de tags reutilizáveis ​​para atribuir rapidamente as mesmas tags a diferentes ativos de dados.
+
+<div style="text-align: center;">
+<img src="Images/catalog.jpg" alt="alt text" width="650" height="350"/>
+</div>
+
+
+### **3.1 Tags** 
 No Google Dataplex, tags são metadados que podem ser usados para descrever e categorizar dados. Elas servem como uma camada adicional de informações, facilitando a governança e o gerenciamento dos dados em um Data Lake. As tags ajudam a organizar, classificar e identificar dados de forma mais eficiente, além de melhorar a busca, a análise e a aplicação de políticas de segurança e governança.<br>
 
 As **tags** no Dataplex são aplicadas aos assets (como datasets ou tabelas no BigQuery, buckets no Cloud Storage) e ajudam a identificar atributos específicos dos dados. Cada tag pode ter um conjunto de atributos que definem propriedades como:
@@ -99,17 +108,13 @@ As **tags** no Dataplex são aplicadas aos assets (como datasets ou tabelas no B
 </div>
 
 
-### **2.3.1 Tags de Governança**
+### **3.1.1 Tags de Governança**
 >São usadas para aplicar políticas de acesso, conformidade e segurança a dados em diferentes assets (datasets, tabelas, arquivos).
 Por exemplo, você pode aplicar uma tag para indicar que certos dados são sensíveis ou que precisam cumprir com regulações como a LGPD ou SOX.
 
-### **2.3.1 Tags Personalizadas**
+### **3.1.2 Tags Personalizadas**
 >São criadas pelo próprio usuário para categorizar os dados de acordo com as necessidades do negócio.
 Você pode usar essas tags para identificar diferentes tipos de datasets, como dados de vendas, marketing ou recursos humanos.
-
-
-
-
 
 
 ---
@@ -117,6 +122,8 @@ Você pode usar essas tags para identificar diferentes tipos de datasets, como d
 ## 🔗 Links de Laboratórios
 
 - https://www.cloudskillsboost.google/course_templates/726?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A1%2C%22has_search%22%3Atrue%7D&search_id=37620328
+
+- https://www.credly.com/badges/f97d53e5-d963-44d2-9bf9-fced99b5c66a/public_url
 
 ---
 
