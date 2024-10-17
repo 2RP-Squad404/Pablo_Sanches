@@ -10,7 +10,7 @@
 - [**Governança de Dados**](#gdados)
 - [**Dataplex**](#dtplex)
 - [**Data Catalog**](#dtlog)
-- [**Laboratórios**](#labs)
+
 
 ---
 
